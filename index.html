@@ -17,7 +17,8 @@
     --warm-grey:  #7A6E5E;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { overflow-x: hidden; max-width: 100%; }
 
   body {
     background: var(--cream);
@@ -698,7 +699,20 @@
 
   .cover-scheme .scheme-numbers { gap: 10px; }
 
-  .timeline { padding-left: 28px; }
+    css.timeline {
+  padding-left: 28px;
+  margin-left: 8px;
+}
+
+.timeline::before {
+  left: 0;
+}
+
+.timeline-item::before {
+  left: -20px;
+  width: 8px;
+  height: 8px;
+}
 }
   
 </style>
